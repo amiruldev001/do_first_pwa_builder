@@ -7,6 +7,13 @@ window.renderPage = function () {
   components.forEach(comp => {
     const def = ComponentRegistry[comp.type];
     const el = def.render(comp.props);
+
+    el.style.cursor = "pointer";
+    el.addEventListener("click", () => {
+      appState.selectedIndex = index;
+      renderPropsPanel();
+    });
+
     dropzone.appendChild(el);
   });
 };
