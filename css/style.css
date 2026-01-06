@@ -33,3 +33,16 @@ body {
   padding: 10px;
 }
 
+#props {
+  width: 220px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+}
+
+#props input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+
