@@ -2,5 +2,6 @@ window.appState = {
   pages: {
     home: []
   },
-  currentPage: "home"
+  currentPage: "home",
+  selectedIndex: null
 };
