@@ -1,6 +1,6 @@
-appState = {
-  pages: [],
-  currentPage: "home",
-  components: {}
-}
-
+window.appState = {
+  pages: {
+    home: []
+  },
+  currentPage: "home"
+};
