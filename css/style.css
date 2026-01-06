@@ -1,1 +1,35 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 200px;
+  background: #f3f3f3;
+  padding: 10px;
+}
+
+.component {
+  background: white;
+  padding: 8px;
+  margin-bottom: 5px;
+  cursor: grab;
+  border: 1px solid #ccc;
+}
+
+#canvas {
+  flex: 1;
+  padding: 10px;
+}
+
+#dropzone {
+  min-height: 300px;
+  border: 2px dashed #aaa;
+  padding: 10px;
+}
 
