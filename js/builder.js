@@ -51,4 +51,8 @@ window.renderPropsPanel = function () {
   });
 };
 
-
+document.getElementById("dropzone").addEventListener("click", () => {
+  appState.selectedIndex = null;
+  renderPage();
+  renderPropsPanel();
+});
