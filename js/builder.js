@@ -20,3 +20,33 @@ dropzone.addEventListener("drop", e => {
   renderPage();
 });
 
+window.renderPropsPanel = function () {
+  const panel = document.getElementById("props-content");
+  panel.innerHTML = "";
+
+  const index = appState.selectedIndex;
+  if (index === null) {
+    panel.innerHTML = "<em>Select a component</em>";
+    return;
+  }
+
+  const component = appState.pages[appState.currentPage][index];
+
+  Object.keys(component.props).forEach(key => {
+    const label = document.createElement("label");
+    label.innerText = key;
+
+    const input = document.createElement("input");
+    input.value = component.props[key];
+
+    input.addEventListener("input", e => {
+      component.props[key] = e.target.value;
+      renderPage();
+    });
+
+    panel.appendChild(label);
+    panel.appendChild(input);
+  });
+};
+
+
