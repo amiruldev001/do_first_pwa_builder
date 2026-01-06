@@ -18,6 +18,7 @@ dropzone.addEventListener("drop", e => {
   });
 
   renderPage();
+  
 });
 
 window.renderPropsPanel = function () {
@@ -42,6 +43,7 @@ window.renderPropsPanel = function () {
     input.addEventListener("input", e => {
       component.props[key] = e.target.value;
       renderPage();
+      renderPropsPanel(); 
     });
 
     panel.appendChild(label);
